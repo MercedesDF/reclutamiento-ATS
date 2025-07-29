@@ -1,0 +1,9 @@
+# Archivos de conversación y planificación
+conversacion.txt
+resumen_y_plan.txt
+info.txt
+APLICACION_RECLUTAMIENTO_ATS.TXT
+
+# Archivos de sistema
+.DS_Store
+thumbs.db
