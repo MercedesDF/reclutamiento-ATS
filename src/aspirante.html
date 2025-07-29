@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aspirante - Mercedev ATS</title>
+    <meta name="description" content="Análisis de perfil de aspirante y enlaces a portales de empleo.">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <h1 class="header__title">Mercedev ATS</h1>
+            <p class="header__subtitle">Tu perfil, optimizado</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="aspirante-section">
+            <h2 class="aspirante-section__title">Análisis de tu perfil de aspirante</h2>
+            <p class="aspirante-section__description">Este es un análisis por defecto basado en el CV de Mercedes como desarrolladora full stack:</p>
+
+            <div class="analysis-summary">
+                <ul class="analysis-summary__list">
+                    <li class="analysis-summary__item analysis-summary__item--positive">✔️ Dominio de React, Node.js y MongoDB.</li>
+                    <li class="analysis-summary__item analysis-summary__item--positive">✔️ Nivel de inglés B1-B2.</li>
+                    <li class="analysis-summary__item analysis-summary__item--positive">✔️ Experiencia previa en gestión y liderazgo (jefa de barra).</li>
+                    <li class="analysis-summary__item analysis-summary__item--negative">⚠️ Falta formación práctica en Docker y Scrum.</li>
+                </ul>
+            </div>
+
+            <h3 class="aspirante-section__subtitle">🔗 Busca empleo en estos portales:</h3>
+            <div class="job-portals">
+                <a href="https://www.infojobs.net/" target="_blank" rel="noopener noreferrer" class="button button--portal">InfoJobs</a>
+                <a href="https://www.linkedin.com/jobs" target="_blank" rel="noopener noreferrer" class="button button--portal">LinkedIn Empleos</a>
+                <a href="https://www.tecnoempleo.com/" target="_blank" rel="noopener noreferrer" class="button button--portal">TecnoEmpleo</a>
+            </div>
+
+            <p class="aspirante-section__tip">Recuerda que mejorar continuamente tus habilidades técnicas y tu perfil te acercará cada vez más al empleo deseado. ¡Ánimo y a por todas, Leo valiente! 🚀</p>
+
+            <a href="./index.html" class="button button--back" aria-label="Volver a la selección de rol">← Volver</a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__text">© 2025 Mercedev.es - Desarrollado con 🔥</p>
+    </footer>
+
+    <div class="merci-widget" id="merci-container">
+        <div class="merci-widget__svg-wrapper">
+            <svg
+  id="merci-svg"
+  width="150"
+  height="200"
+  viewBox="0 0 150 200"
+  xmlns="http://www.w3.org/2000/svg"
+  role="img"
+  aria-label="Mercí, la llama coder"
+>
+  <!-- Cabeza de fuego -->
+  <g class="merci__head-fire">
+    <path fill="#FF4500" d="M75 10 C60 40 90 40 75 10 Z">
+      <animate
+        attributeName="d"
+        dur="2s"
+        repeatCount="indefinite"
+        values="
+          M75 10 C60 40 90 40 75 10 Z;
+          M75 12 C58 38 92 38 75 12 Z;
+          M75 10 C60 40 90 40 75 10 Z
+        "
+      />
+    </path>
+    <path fill="#FFA500" d="M75 20 C65 35 85 35 75 20 Z">
+      <animate
+        attributeName="d"
+        dur="2.5s"
+        repeatCount="indefinite"
+        values="
+          M75 20 C65 35 85 35 75 20 Z;
+          M75 18 C63 33 87 33 75 18 Z;
+          M75 20 C65 35 85 35 75 20 Z
+        "
+      />
+    </path>
+  </g>
+
+  <!-- Cuerpo (palitos) -->
+  <rect x="70" y="50" width="10" height="80" fill="#555" rx="3" ry="3" class="merci__body" />
+
+  <!-- Brazos como símbolos </> -->
+  <text
+    x="60"
+    y="90"
+    font-family="monospace"
+    font-size="20"
+    fill="#008080"
+    class="merci__arm merci__arm--left"
+  >
+    &lt;/
+  </text>
+  <text
+    x="95"
+    y="90"
+    font-family="monospace"
+    font-size="20"
+    fill="#008080"
+    class="merci__arm merci__arm--right"
+  >
+    &gt;
+  </text>
+
+  <!-- Piernas (palitos) -->
+  <rect x="65" y="130" width="5" height="40" fill="#555" rx="2" ry="2" class="merci__leg merci__leg--left" />
+  <rect x="80" y="130" width="5" height="40" fill="#555" rx="2" ry="2" class="merci__leg merci__leg--right" />
+
+  <!-- Ojos (simple) -->
+  <circle cx="68" cy="40" r="5" fill="#222" class="merci__eye merci__eye--left" />
+  <circle cx="82" cy="40" r="5" fill="#222" class="merci__eye merci__eye--right" />
+
+  <!-- Boca (curva sonriente) -->
+  <path
+    d="M65 55 Q75 65 85 55"
+    stroke="#222"
+    stroke-width="2"
+    fill="none"
+    stroke-linecap="round"
+    class="merci__mouth"
+  />
+</svg>
+        </div>
+        <div class="merci-widget__message" id="merci-message"></div>
+        <button class="merci-widget__toggle-btn" id="merci-toggle-btn" aria-label="Ocultar o mostrar Mercí">Ocultar Mercí</button>
+    </div>
+
+    <script type="module" src="./js/main.js" defer></script>
+</body>
+</html>

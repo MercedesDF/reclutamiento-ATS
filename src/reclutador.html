@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reclutador - Mercedev ATS</title>
+    <meta name="description" content="Sube una oferta de empleo en PDF para analizar su compatibilidad con el CV de Mercedes.">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <h1 class="header__title">Mercedev ATS</h1>
+            <p class="header__subtitle">Análisis de Ofertas de Empleo</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="reclutador-section">
+            <h2 class="reclutador-section__title">Sube la oferta de empleo (PDF)</h2>
+            <p class="reclutador-section__description">Analizaremos el PDF para ver qué tan bien encaja con el perfil de Mercedes.</p>
+
+            <div class="upload-form">
+                <input type="file" id="pdf-upload-input" accept="application/pdf" class="upload-form__input" aria-label="Seleccionar archivo PDF de oferta de empleo">
+                <button id="analyze-pdf-btn" class="button button--reclutador upload-form__button" disabled>Analizar Oferta</button>
+            </div>
+
+            <div id="analysis-results" class="analysis-results" aria-live="polite">
+                <!-- Los resultados del análisis se mostrarán aquí -->
+                <p class="analysis-results__placeholder">Esperando tu PDF para empezar el análisis...</p>
+            </div>
+
+            <a href="./index.html" class="button button--back" aria-label="Volver a la selección de rol">← Volver</a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__text">© 2025 Mercedev.es - Desarrollado con 🔥</p>
+    </footer>
+
+    <div class="merci-widget" id="merci-container">
+        <div class="merci-widget__svg-wrapper">
+            <svg
+  id="merci-svg"
+  width="150"
+  height="200"
+  viewBox="0 0 150 200"
+  xmlns="http://www.w3.org/2000/svg"
+  role="img"
+  aria-label="Mercí, la llama coder"
+>
+  <!-- Cabeza de fuego -->
+  <g class="merci__head-fire">
+    <path fill="#FF4500" d="M75 10 C60 40 90 40 75 10 Z">
+      <animate
+        attributeName="d"
+        dur="2s"
+        repeatCount="indefinite"
+        values="
+          M75 10 C60 40 90 40 75 10 Z;
+          M75 12 C58 38 92 38 75 12 Z;
+          M75 10 C60 40 90 40 75 10 Z
+        "
+      />
+    </path>
+    <path fill="#FFA500" d="M75 20 C65 35 85 35 75 20 Z">
+      <animate
+        attributeName="d"
+        dur="2.5s"
+        repeatCount="indefinite"
+        values="
+          M75 20 C65 35 85 35 75 20 Z;
+          M75 18 C63 33 87 33 75 18 Z;
+          M75 20 C65 35 85 35 75 20 Z
+        "
+      />
+    </path>
+  </g>
+
+  <!-- Cuerpo (palitos) -->
+  <rect x="70" y="50" width="10" height="80" fill="#555" rx="3" ry="3" class="merci__body" />
+
+  <!-- Brazos como símbolos </> -->
+  <text
+    x="60"
+    y="90"
+    font-family="monospace"
+    font-size="20"
+    fill="#008080"
+    class="merci__arm merci__arm--left"
+  >
+    &lt;/
+  </text>
+  <text
+    x="95"
+    y="90"
+    font-family="monospace"
+    font-size="20"
+    fill="#008080"
+    class="merci__arm merci__arm--right"
+  >
+    &gt;
+  </text>
+
+  <!-- Piernas (palitos) -->
+  <rect x="65" y="130" width="5" height="40" fill="#555" rx="2" ry="2" class="merci__leg merci__leg--left" />
+  <rect x="80" y="130" width="5" height="40" fill="#555" rx="2" ry="2" class="merci__leg merci__leg--right" />
+
+  <!-- Ojos (simple) -->
+  <circle cx="68" cy="40" r="5" fill="#222" class="merci__eye merci__eye--left" />
+  <circle cx="82" cy="40" r="5" fill="#222" class="merci__eye merci__eye--right" />
+
+  <!-- Boca (curva sonriente) -->
+  <path
+    d="M65 55 Q75 65 85 55"
+    stroke="#222"
+    stroke-width="2"
+    fill="none"
+    stroke-linecap="round"
+    class="merci__mouth"
+  />
+</svg>
+        </div>
+        <div class="merci-widget__message" id="merci-message"></div>
+        <button class="merci-widget__toggle-btn" id="merci-toggle-btn" aria-label="Ocultar o mostrar Mercí">Ocultar Mercí</button>
+    </div>
+
+    <script type="module" src="./js/main.js" defer></script>
+</body>
+</html>
