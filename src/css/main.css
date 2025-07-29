@@ -160,3 +160,96 @@ body {
         max-width: 220px; /* Limita el ancho en pantallas grandes */
     }
 }
+
+/* Merci Widget */
+.merci-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 180px;
+    cursor: pointer;
+    user-select: none;
+    font-family: var(--font-family-base);
+    z-index: 9999;
+    background: #fff8dc; /* Color de fondo suave para el widget */
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    padding: 10px;
+    text-align: center;
+    transition: opacity var(--transition-speed);
+}
+
+.merci-widget--hidden {
+    opacity: 0.15;
+}
+
+.merci-widget__svg-wrapper {
+    margin: 0 auto;
+    display: block;
+    width: 150px;
+    height: auto;
+}
+
+.merci-widget__message {
+    background: rgba(255, 200, 50, 0.9); /* Fondo amarillo para el mensaje */
+    color: var(--color-black);
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    min-height: 50px;
+    display: flex; /* Para centrar el texto verticalmente */
+    align-items: center;
+    justify-content: center;
+}
+
+.merci-widget__toggle-btn {
+    margin-top: 0.75rem;
+    width: 100%;
+    background: #ffb703; /* Naranja más claro para el botón */
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    padding: 0.4rem 0;
+    cursor: pointer;
+    color: var(--color-black);
+    transition: background-color var(--transition-speed);
+}
+
+.merci-widget__toggle-btn:hover {
+    background-color: #e6a700;
+}
+
+/* Mobile adjustments for Merci */
+@media (max-width: 768px) {
+    .merci-widget {
+        width: 120px; /* Más pequeño en móvil */
+        bottom: 10px;
+        right: 10px;
+        padding: 5px;
+    }
+
+    .merci-widget__svg-wrapper {
+        width: 80px; /* Ajustar tamaño del SVG */
+        height: 80px;
+        overflow: hidden; /* Ocultar partes del cuerpo */
+    }
+
+    /* Ocultar partes del cuerpo en móvil */
+    .merci__body, .merci__arm, .merci__leg {
+        display: none !important;
+    }
+
+    /* Ajustar viewBox para mostrar solo la cabeza en móvil */
+    #merci-svg {
+        width: 100%;
+        height: 100%;
+        viewBox: 0 0 150 60; /* Mostrar solo la parte superior */
+    }
+
+    .merci-widget__message {
+        font-size: 0.8rem;
+        min-height: 40px;
+    }
+}
